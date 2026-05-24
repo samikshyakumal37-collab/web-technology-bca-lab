@@ -1,157 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registration and Login Form</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#e5e5e5;
-}
-
-.container{
-    width:900px;
-    background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
-    background-size:cover;
-    background-position:center;
-    padding:40px;
-    display:flex;
-    gap:20px;
-    color:white;
-}
-
-.form-box{
-    flex:1;
-    background:rgba(0,0,0,0.6);
-    padding:25px;
-}
-
-h1{
-    text-align:center;
-    margin-bottom:25px;
-    font-size:30px;
-    font-weight:bold;
-}
-
-h2{
-    color:#00d4ff;
-    margin-bottom:15px;
-    font-size:22px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"]{
-    width:100%;
-    padding:10px;
-    margin:8px 0;
-    border:none;
-    background:#333;
-    color:white;
-}
-
-small{
-    color:#ccc;
-    font-size:12px;
-}
-
-.gender{
-    margin:15px 0;
-}
-
-.gender label{
-    margin-right:20px;
-}
-
-.terms{
-    margin:15px 0;
-    font-size:13px;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    border:none;
-    background:#d39b10;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    margin-top:10px;
-}
-
-button:hover{
-    background:#b88408;
-}
-
-.remember{
-    margin-top:10px;
-    font-size:13px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="invoice-wrapper">
+    <div class="top-bar"></div>
 
-<div class="container">
-
-    <!-- Registration Form -->
-    <div class="form-box">
-        <h2>Register Form :</h2>
-
-        <form>
-            <input type="text" placeholder="Username">
-
-            <input type="email" placeholder="Email">
-            <small>Please enter a valid email address</small>
-
-            <input type="password" placeholder="Password">
-            <small>Minimum of 6 characters</small>
-
-            <input type="password" placeholder="Confirm password">
-
-            <div class="gender">
-                <input type="radio" name="gender"> Female
-                <input type="radio" name="gender"> Male
+    <header class="invoice-header">
+        <div class="company-brand">
+            <div class="logo-circle">LOGO</div>
+            <div class="company-details">
+                <h2>&lt;Your Company Name&gt;</h2>
+                <p>&lt;Your address&gt;</p>
+                <p>&lt;Your contact details&gt;</p>
             </div>
+        </div>
+        <div class="invoice-meta">
+            <h1>INVOICE</h1>
+            <div class="meta-field"><strong>DATE</strong> <span></span></div>
+            <div class="meta-field"><strong>INVOICE NO.</strong> <span></span></div>
+        </div>
+    </header>
 
-            <div class="terms">
-                <input type="checkbox"> I have read and accept terms of use.
-            </div>
-
-            <button type="submit">SUBMIT</button>
-        </form>
+    <div class="billing-info">
+        <div class="bill-to">
+            <h3>BILL TO</h3>
+            <p>&lt;Contact Name&gt;</p>
+            <p>&lt;Client Company Name&gt;</p>
+            <p>&lt;Address&gt;</p>
+            <p>&lt;Phone&gt;</p>
+            <p>&lt;Email&gt;</p>
+        </div>
+        <div class="ship-to">
+            <h3>SHIP TO</h3>
+            <p>&lt;Name / Dept&gt;</p>
+            <p>&lt;Client Company Name&gt;</p>
+            <p>&lt;Address&gt;</p>
+            <p>&lt;Phone&gt;</p>
+        </div>
+        <p class="payment-terms"><i>&lt;Payment terms (due on receipt, due in X days)&gt;</i></p>
     </div>
 
-    <!-- Login Form -->
-    <div class="form-box">
-        <h2>Login form :</h2>
+    <table class="invoice-table">
+        <thead>
+            <tr>
+                <th>DESCRIPTION</th>
+                <th>QTY</th>
+                <th>UNIT PRICE</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td></td><td></td><td></td><td>0.00</td></tr>
+            <tr><td></td><td></td><td></td><td>0.00</td></tr>
+            <tr><td></td><td></td><td></td><td>0.00</td></tr>
+            <tr><td></td><td></td><td></td><td>0.00</td></tr>
+        </tbody>
+    </table>
 
-        <form>
-            <input type="email" placeholder="Enter Your Email">
-
-            <input type="password" placeholder="Password">
-
-            <div class="remember">
-                <input type="checkbox"> Remember me
+    <div class="invoice-footer">
+        <div class="remarks">
+            <p>Remarks / Payment Instructions:</p>
+        </div>
+        <div class="totals">
+            <div class="total-row"><span>SUBTOTAL</span> <span>0.00</span></div>
+            <div class="total-row"><span>DISCOUNT</span> <span>0.00</span></div>
+            <div class="total-row"><span>SUBTOTAL LESS DISCOUNT</span> <span>0.00</span></div>
+            <div class="total-row"><span>TAX RATE</span> <span>0.00%</span></div>
+            <div class="total-row"><span>TOTAL TAX</span> <span>0.00</span></div>
+            <div class="total-row"><span>SHIPPING/HANDLING</span> <span>0.00</span></div>
+            <div class="balance-due">
+                <span>Balance Due</span>
+                <span>$ -</span>
             </div>
-
-            <button type="submit">LOGIN</button>
-        </form>
+        </div>
     </div>
 
+    <div class="bottom-bar"></div>
 </div>
-
 </body>
 </html>

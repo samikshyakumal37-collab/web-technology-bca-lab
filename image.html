@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Map Example</title>
+
+    <style>
+        .container{
+            display:flex;
+            gap:40px;
+            align-items:center;
+            margin-top:30px;
+        }
+
+        img{
+            width:200px;
+            height:200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1>Image Map Demonstration</h1>
+
+<div class="container">
+
+    <!-- Rectangle Image -->
+    <img src="rectangle.jpg"
+         alt="Rectangle"
+         usemap="#rectmap">
+
+    <map name="rectmap">
+        <area shape="rect"
+              coords="0,0,200,200"
+              href="https://www.google.com"
+              alt="Rectangle Link">
+    </map>
+
+
+    <!-- Circle Image -->
+    <img src="circle.jpg"
+         alt="Circle"
+         usemap="#circlemap">
+
+    <map name="circlemap">
+        <area shape="circle"
+              coords="100,100,90"
+              href="https://www.wikipedia.org"
+              alt="Circle Link">
+    </map>
+
+
+    <!-- Triangle Image -->
+    <img src="triangle.jpg"
+         alt="Triangle"
+         usemap="#polymap">
+
+    <map name="polymap">
+        <area shape="poly"
+              coords="100,10,10,190,190,190"
+              href="https://www.yahoo.com"
+              alt="Triangle Link">
+    </map>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* =============================================
+   EXTERNAL CSS FILE - styles.css
+   This file demonstrates External CSS type
+   ============================================= */
+
+/* Styling for external CSS example box */
+.external-style {
+    color: white;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.3);
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.external-style:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4);
+}
+
+/* Additional styles to demonstrate external CSS capabilities */
+
+/* Responsive design example */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .section {
+        padding: 15px;
+    }
+}
+
+/* Hover effects on sections */
+.section:hover {
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Code example styling */
+.code-example {
+    line-height: 1.5;
+}
+
+.code-example:hover {
+    background-color: #2b2b2b;
+}
+
+/* Link styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
