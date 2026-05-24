@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration and Login Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e5e5e5;
+}
+
+.container{
+    width:900px;
+    background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+    background-size:cover;
+    background-position:center;
+    padding:40px;
+    display:flex;
+    gap:20px;
+    color:white;
+}
+
+.form-box{
+    flex:1;
+    background:rgba(0,0,0,0.6);
+    padding:25px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+h2{
+    color:#00d4ff;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:none;
+    background:#333;
+    color:white;
+}
+
+small{
+    color:#ccc;
+    font-size:12px;
+}
+
+.gender{
+    margin:15px 0;
+}
+
+.gender label{
+    margin-right:20px;
+}
+
+.terms{
+    margin:15px 0;
+    font-size:13px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#d39b10;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#b88408;
+}
+
+.remember{
+    margin-top:10px;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Registration Form -->
+    <div class="form-box">
+        <h2>Register Form :</h2>
+
+        <form>
+            <input type="text" placeholder="Username">
+
+            <input type="email" placeholder="Email">
+            <small>Please enter a valid email address</small>
+
+            <input type="password" placeholder="Password">
+            <small>Minimum of 6 characters</small>
+
+            <input type="password" placeholder="Confirm password">
+
+            <div class="gender">
+                <input type="radio" name="gender"> Female
+                <input type="radio" name="gender"> Male
+            </div>
+
+            <div class="terms">
+                <input type="checkbox"> I have read and accept terms of use.
+            </div>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-box">
+        <h2>Login form :</h2>
+
+        <form>
+            <input type="email" placeholder="Enter Your Email">
+
+            <input type="password" placeholder="Password">
+
+            <div class="remember">
+                <input type="checkbox"> Remember me
+            </div>
+
+            <button type="submit">LOGIN</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
